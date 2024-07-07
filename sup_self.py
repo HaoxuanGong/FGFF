@@ -124,7 +124,7 @@ def prepare_data():
 if __name__ == "__main__":
     torch.manual_seed(1234)
     positive_data, negative_data, training_data, training_data_label, testing_data, testing_data_label = prepare_data()
-    network = Network([784, 500, 500]).cuda() #3072
+    network = Network([784, 500, 500]).cuda()
     network.train_network(positive_data, negative_data)
 
     print("Training Accuracy: ", network.predict(training_data).eq(training_data_label).float().mean().item())

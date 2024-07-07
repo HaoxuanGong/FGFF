@@ -1,10 +1,9 @@
+import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
 from torch import Tensor
-from tqdm import tqdm
-import torch.nn.functional as F
-import matplotlib.pyplot as plt
 from torch.optim import Adam
+from tqdm import tqdm
 
 number_of_epochs = 200
 
